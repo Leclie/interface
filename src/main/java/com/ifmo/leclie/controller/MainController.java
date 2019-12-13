@@ -10,9 +10,15 @@ import java.util.Map;
 public class MainController {
 
     @GetMapping("/")
-    public String greeting(Map<String, Object> model) {
+    public String main(Map<String, Object> model) {
         model.put("hello", "Hello");
         return "main";
+    }
+
+    @GetMapping("/login")
+    public String login(Map<String, Object> model) {
+
+        return "login";
     }
 
 }
